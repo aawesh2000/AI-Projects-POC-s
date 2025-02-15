@@ -1,24 +1,18 @@
 import streamlit as st
-import os
-
-os.system("pip uninstall pdfplumber -y")
-os.system("pip install pdfplumber==0.9.0")
-
-import pdfplumber
+import fitz  # PyMuPDF
 from groq import Groq
 import io
 from datetime import datetime
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
-
 # Initialize Groq client
 client = Groq(api_key="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")  # Replace with your actual API key
 
 def read_pdf(file):
-    """Extract text while preserving formatting using pdfplumber."""
-    with pdfplumber.open(file) as pdf:
-        text = "\n".join([page.extract_text() for page in pdf.pages if page.extract_text()])
+    """Extract text while preserving formatting using PyMuPDF (fitz)."""
+    doc = fitz.open(stream=file.read(), filetype="pdf")
+    text = "\n".join([page.get_text("text") for page in doc])
     return text
 
 def extract_sections(resume_text):
