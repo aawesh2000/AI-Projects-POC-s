@@ -3,3 +3,4 @@ pdfplumber
 groq
 reportlab
 PyPDF2
+python-dotenv
