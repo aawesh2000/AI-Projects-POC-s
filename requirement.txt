@@ -1,0 +1,5 @@
+streamlit
+pdfplumber
+groq
+reportlab
+PyPDF2
