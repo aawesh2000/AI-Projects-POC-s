@@ -1,6 +1,9 @@
 import streamlit as st
 import os
-os.system("pip install pdfplumber")
+
+os.system("pip uninstall pdfplumber -y")
+os.system("pip install pdfplumber==0.9.0")
+
 import pdfplumber
 from groq import Groq
 import io
