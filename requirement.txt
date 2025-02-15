@@ -1,5 +1,5 @@
 streamlit
-pdfplumber
+pymupdf
 groq
 reportlab
 PyPDF2
