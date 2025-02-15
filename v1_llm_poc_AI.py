@@ -1,10 +1,13 @@
 import streamlit as st
+import os
+os.system("pip install pdfplumber")
 import pdfplumber
 from groq import Groq
 import io
 from datetime import datetime
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
+
 
 # Initialize Groq client
 client = Groq(api_key="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")  # Replace with your actual API key
