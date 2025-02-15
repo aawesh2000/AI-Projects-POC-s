@@ -1,5 +1,5 @@
 import streamlit as st
-import fitz  # PyMuPDF
+import PyMuPDF
 from groq import Groq
 import io
 from datetime import datetime
