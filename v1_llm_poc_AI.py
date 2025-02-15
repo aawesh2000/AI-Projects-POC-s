@@ -1,6 +1,4 @@
 import os
-os.system("pip install pymupdf==1.21.1")
-
 import fitz  # PyMuPDF
 import streamlit as st
 import fitz
