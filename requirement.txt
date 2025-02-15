@@ -1,5 +1,5 @@
 streamlit
-pymupdf==1.21.1
+pymupdf==1.20.2
 groq
 reportlab
 PyPDF2
